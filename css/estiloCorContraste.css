@@ -1,0 +1,315 @@
+body {
+  margin: 0px;
+}
+
+/*CLASS*/
+.titulo{
+  height: auto;
+  font-weight: bold;
+  padding: 40px 30px;
+  background-color: #4CAF50;
+}
+.busca {
+  margin-top: 7px;
+  margin-right: 2px;
+  float: right;
+}
+.busca input[type=text] {
+  padding: 7px;
+  border: none;
+  font-size: 17px;
+}
+.busca button {
+  float: right;
+  padding: 7px;
+  position: relative;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.busca .search-container button:hover {
+  background: #0b7dda;
+}
+.busca::after{
+  content: "";
+  clear: both;
+}
+
+.topnav{
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  background-color: #4CAF50;
+  overflow: hidden;
+  font-weight: bold;
+  /*https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp*/
+  position: fixed;
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.topnav a {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  background-color: #eee;
+  color: black;
+}
+
+.topnav a.active {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  background-color: #4CAF50;
+  color: white;
+}
+
+.tabcontent {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  float: right;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 83%;
+  border-left: none;
+  height: auto;
+}
+
+.vertical-menu {
+  border: 1px solid #ccc;
+  border-left: none;
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  width: 200px; /* Set a width if you like */
+  position: fixed;
+}
+
+.vertical-menu nav {
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  background-color: white; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+.vertical-menu a{
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+.vertical-menu a:hover {
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  background-color: #4CAF50; /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+/*.footer {
+  /*https://www.w3schools.com/howto/howto_css_fixed_footer.asp*
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible*/
+.collapsible {
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ddd
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    overflow: auto;
+}
+.botoes{
+  float: left;
+  margin-bottom: 10px;
+}
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3*/
+.button1 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button1:hover {background-color: #3e8e41}
+
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
+.button2 {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button3 {
+    background-color: #f44336; /* Red*/
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+}
+.button3:hover {background: #da190b;}
+.button4 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+}
+.button4:hover {background-color: #3e8e41;}
+
+.button5 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float: left;
+    margin-left: 30px;
+}
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button5:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.form1{
+  margin-bottom: 20px;
+  float: left;
+}
+
+.w3-input{
+  border: 2px solid #4CAF50;
+}
+.exemploNAV{
+  float: left;
+  margin-left: 10px;
+  width: 200px;
+}
+.exemploNAV a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.exemploNAV a:hover {
+    background-color: #ccc;
+}
+
+.exemploNAV a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*IDS*/
+#tabela{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 15px;
+}
+#collapsible1{
+  background-color: #2E662E;
+}
+#collapsible2{
+  background-color: #3E8E3E;
+}
+#collapsible3{
+  background-color: #4BAA4B;
+}
+#home{
+  color: black;
+  float: center;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guia do Desenvolvedor Consciente</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="css/estiloCorContraste.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="#acessibilidade">Acessibilidade</a>
+    <a href="#altocontraste">Alto Contraste</a>
+    <a href="#mapadosite">Mapa do Site</a>
+    <form id="busca" class="busca">
+      <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <h1 class="titulo">Cor e Contraste</h1>
+
+  <div class="vertical-menu">
+    <a href="#" class="active">Home</a>
+    <a href="#Conteudo1">Cor e Contraste</a>
+    <a href="#Conteudo2">Contraste Mínimo Entre os Planos</a>
+    <a href="#Conteudo3">Utilização de Recursos Além da Cor</a>
+    <a href="#Conteudo4">Cor para Realçar Elementos em Foco</a>
+    <a href="#Conteudo5">Cores Contrastantes com Preto</a>
+    <a href="#Conteudo6">Cores Contrastantes com Branco</a>
+  </div>
+
+  <section class="conteudos" id="conteudos">
+    <section id="Conteudo1" class="tabcontent">
+      <h3><span class="name">Cor e Constraste</span></h3>
+      <p>
+        <!--https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head-->
+        Existem normas no W3C sobre o uso de cores e medidas de contraste para que todos os tipos de usuários possam acessar os sites sem maiores problemas.
+        O conteúdo deve ser testado por aqueles que entendem como as pessoas com diferentes tipos de deficiência usam a Web.
+        Testes são feitos para determinar o quão bem as pessoas podem usar o conteúdo para a sua finalidade, e
+        os resultados são classificados em A (básico), AA (recomendado) e AAA (excelencia).
+      </p>
+      </section>
+
+      <section id="Conteudo2" class="tabcontent">
+        <h3><span class="name">Contraste Mínimo Entre os Planos</span></h3>
+        <p>
+          As cores do plano de fundo e do primeiro plano deverão ser suficientemente contrastantes para que possam ser visualizadas, também, por pessoas com baixa visão, com cromodeficiências ou que utilizam monitores de vídeo monocromático.
+          A relação de contraste entre plano de fundo e primeiro plano deve ser no mínimo 3:1, sendo o ideal na medida 5:1, podendo ser também 7.1. Existem ferramentas gratuitas disponíveis na Web que verificam a relação de contraste entre as cores do plano de fundo e do primeiro plano.
+        </p>
+        <div class="exemplos">
+          <button id="collapsible1" class="collapsible">Relação de Contraste 3.1 <i class="fa fa-caret-square-o-down"></i></button>
+          <div id="collapsible1" class="content">
+            <p>A relação de 3.1 preenche o nível A de sucesso</p>
+            <p>BACKGROUND-COLOR: #2E662E </p>
+            <p>COLOR: #000000</p>
+          </div>
+          <button id="collapsible2" class="collapsible">Relação de Contraste 5.1 <i class="fa fa-caret-square-o-down"></i></button>
+          <div id="collapsible2" class="content">
+            <p>A relação de 5.1 preenche os níveis A e AA de sucesso</p>
+            <p>BACKGROUND-COLOR: #3E8E3E </p>
+            <p>COLOR: #000000</p>
+          </div>
+          <button id="collapsible3" class="collapsible">Relação de Contraste 7.1 <i class="fa fa-caret-square-o-down"></i></button>
+          <div id="collapsible3" class="content">
+            <p>A relação de 7.1 preenche os níveis A, AA e AAA de sucesso</p>
+            <p>BACKGROUND-COLOR: #4BAA4B </p>
+            <p>COLOR: #000000</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Conteudo3" class="tabcontent">
+        <h3><span class="name">Utilizar mais Recursos além da Cor para Diferenciação</span></h3>
+        <p>
+          Pensando em usuários com daltonismo, por exemplo, apenas cor, forma ou localização visual não é suficientemente descritivo para diferenciar elementos.
+          É importante dar informações de várias maneiras diferentes e a maneira mais eficiênte é através de ícones e movimento.
+        </p>
+        <div class="botoes">
+          <div class="w3-container">
+            <button class="button1" onclick="myFunction('Demo1')">Clique Aqui</button>
+            <button class="button2" onclick="myFunction('Demo2')" style="vertical-align:middle"><span>Prosseguir </span>
+              <button class="button3" onclick="myFunction('Demo3')"><i class="fa fa-ban" style="color:white;"> Cancelar</i></button>
+              <button class="button4" onclick="myFunction('Demo4')"><i class="fa fa-check" style="color:white"> Continuar</i></button>
+            </div>
+            <div id="Demo1" class="w3-hide w3-panel w3-card w3-light-grey">
+              <h4>CSS do Botão</h4>
+              <div class="w3-code cssHigh notranslate">
+                .button_clique_aqui {<br>
+                  display: inline-block;<br>
+                  padding: 15px 25px;<br>
+                  font-size: 24px;<br>
+                  cursor: pointer;<br>
+                  text-align: center;<br>
+                  text-decoration: none;<br>
+                  outline: none;<br>
+                  color: #fff;<br>
+                  background-color: #4CAF50;<br>
+                  border: none;<br>
+                  border-radius: 15px;<br>
+                  box-shadow: 0 9px #999;<br>
+                }<br><br>
+
+                .button_clique_aqui:hover {<br>
+                  background-color: #3e8e41;<br>
+                }<br><br>
+
+                .button_clique_aqui:active {<br>
+                  background-color: #3e8e41;<br>
+                  box-shadow: 0 5px #666;<br>
+                  transform: translateY(4px);<br>
+                }<br><br>
+              </div>
+            </div>
+            <div id="Demo2" class="w3-hide w3-panel w3-card w3-light-grey">
+              <h4>CSS do Botão</h4>
+              <div class="w3-code cssHigh notranslate">
+                .button_prosseguir {<br>
+                  display: inline-block;<br>
+                  border-radius: 15px;<br>
+                  background-color: #4CAF50;<br>
+                  border: none;<br>
+                  color: #FFFFFF;<br>
+                  text-align: center;<br>
+                  font-size: 28px;<br>
+                  padding: 20px;<br>
+                  width: 200px;<br>
+                  transition: all 0.5s;<br>
+                  cursor: pointer;<br>
+                  margin: 5px;<br>
+                }<br><br>
+
+                .button_prosseguir span {<br>
+                  cursor: pointer;<br>
+                  display: inline-block;<br>
+                  position: relative;<br>
+                  transition: 0.5s;<br>
+                }<br><br>
+
+                .button_prosseguir span:after {<br>
+                  content: '\00bb';<br>
+                  position: absolute;<br>
+                  opacity: 0;<br>
+                  top: 0;<br>
+                  right: -20px;<br>
+                  transition: 0.5s;<br>
+                }<br><br>
+
+                .button_prosseguir:hover span {<br>
+                  padding-right: 25px;<br>
+                }<br><br>
+
+                .button_prosseguir:hover span:after {<br>
+                  opacity: 1;<br>
+                  right: 0;<br>
+                }<br><br>
+              </div>
+            </div>
+            <div id="Demo3" class="w3-hide w3-panel w3-card w3-light-grey">
+              <h4>CSS do Botão</h4>
+              <div class="w3-code cssHigh notranslate">
+                .button_cancelar {<br>
+                  background-color: #f44336;<br>
+                  border: none;<br>
+                  padding: 15px 32px;<br>
+                  text-decoration: none;<br>
+                  display: inline-block;<br>
+                  font-size: 16px;<br>
+                  border-radius: 15px;<br>
+                }<br><br>
+                .button_cancelar:hover {<br>
+                  background: #da190b;<br>
+                }<br><br>
+              </div>
+            </div>
+            <div id="Demo4" class="w3-hide w3-panel w3-card w3-light-grey">
+              <h4>CSS do Botão</h4>
+              <div class="w3-code cssHigh notranslate">
+                .button_continuar {<br>
+                  background-color: #f44336; <br>
+                  border: none;<br>
+                  padding: 15px 32px;<br>
+                  text-decoration: none;<br>
+                  display: inline-block;<br>
+                  font-size: 16px;<br>
+                  border-radius: 15px;<br>
+                }<br><br>
+                .button_continuar:hover {<br>
+                  background: #da190b;<br>
+                }<br><br>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section id="Conteudo4" class="tabcontent">
+        <h3><span class="name">Usar Cor para Realçar o Elemento em Foco</span></h3>
+        <p>
+          A área que recebe o foco pelo teclado deve ser claramente marcada, devendo a área
+          de seleção ser passível de ser clicada. Por padrão, links e elementos de formulário já apresentam a borda destacada ao
+          receberem o foco do teclado. Essa borda pode ser modificada via CSS para melhorar o
+          destaque, mas não deverá ser removida. Recomenda-se que a espessura mínima da
+          borda seja de 2px. O teste pode ser efetuado com a tecla TAB.
+        </p>
+        <div class="w3-container w3-half w3-margin-top">
+          <form class="form1 w3-container w3-card-4">
+            <p>
+              <input class="w3-input" type="text" style="width:90%" required>
+              <label>Name</label></input>
+            </p>
+              <p>
+                <input class="w3-input" type="password" style="width:90%" required>
+                <label>Password</label></input>
+              </p>
+              </form>
+              <button class="button5">Clique Aqui</button>
+            </div>
+
+            <nav class="exemploNAV">
+              <ul>
+                <li><a href="">Página Inicial</a></li>
+                <li><a href="">Eventos</a></li>
+                <li><a href="">Quem Somos</a></li>
+                <li><a href="">Contato</a></li>
+              </ul>
+            </nav>
+          </section>
+
+          <section id="Conteudo5" class="tabcontent">
+            <h3><span class="name">Cores Contrastantes com Preto</span></h3>
+            <img id="tabela" src="img/tabela1.png" alt="Tabela de Cores Contrastantes com Preto">
+            </section>
+            <section id="Conteudo6" class="tabcontent">
+              <h3><span class="name">Cores Contrastantes com Branco</span></h3>
+              <img id="tabela" src="img/tabela2.png" alt="Tabela de Cores Contrastantes com Branco">
+              </section>
+      </section>
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/NavegacaoPorLinks.js"></script>
+    <script type="text/javascript" src="js/Busca.js"></script>
+    <script type="text/javascript" src="js/collapse.js"></script>
+
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+    w3CodeColor();
+    </script>
+  </body>
+  </html>
