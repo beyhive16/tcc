@@ -56,11 +56,11 @@
 
             <label>Seu Aniversário: (dia/mes/ano)</label>
             <input type="date" name="bday">
-
             <input type="submit" value="Enviar">
           </form>
         </div>
       </div>
+
     </section>
     <section id="Conteudo3" class="tabcontent">
       <h3><span class="name">Identificar e Descrever Erros de Entrada de Dados</span></h3>
@@ -87,14 +87,33 @@
       <p>
         Após a validação dos dados, antes de enviar o formulário, uma tela de confirmação deverá aparecer, permitindo que o usuário verifique e, se necessário, edite as informações antes de enviá-las.
       </p>
-      <img src="img/confirmacao.png" alt="tela de confirmacao de Dados">
+      <form class="fieldsets w3-cell w3-container w3-card-4 w3-light-grey">
+        <fieldset >
+          <legend>Página de Confirmação</legend>
+          Nome Completo:<br>
+          <input class="w3-input w3-border" type="text" name="firstname" value="João da Silva">
+          <br>
+          Telefone Pessoal:<br>
+          <input class="w3-input w3-border" type="text" name="telefonepessoal" value="4002-8922">
+          <br>
+          E-mail:<br>
+          <input class="w3-input w3-border" type="text" name="emailpessoal" value="email@exemplo.com">
+          <br>
+          <div class="w3-panel" >
+            <button class="w3-button w3-block w3-red">Editar</button>
+          </div>
+          <div class="w3-panel" >
+            <button class="w3-button w3-block w3-green">Enviar</button>
+          </div>
+        </fieldset>
+      </form>
     </section>
     <section id="Conteudo5" class="tabcontent">
       <h3><span class="name">Agrupar por Tipo de Dados no Formulário</span></h3>
       <p>
         Estabelecer blocos dividindo o formulário por tipo de dado pedido através de etiquetas (elemento LABEL).
       </p>
-      <form class=" fieldsets w3-container w3-card-4 w3-light-grey">
+      <form class=" fieldsets w3-cell w3-container w3-card-4 w3-light-grey">
         <fieldset>
           <legend>Dados Pessoais</legend>
           Nome Completo:<br>
