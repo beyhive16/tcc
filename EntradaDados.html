@@ -4,111 +4,152 @@
   <title>Guia do Desenvolvedor Consciente</title>
   <meta charset="utf-8">
   <link rel="icon" href="img/icon.png">
-  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/estiloEntradaDados.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
 </head>
 <body>
 
-  <div id="cabecalho" class="cabecalho">
-    <h1 class="titulo" id="tituloPag">Entrada de Dados</h1>
-    <div class="busca">
-      <form action="" style="margin:auto;max-width:300px">
-        <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
+  <div class="topnav">
+    <a href="#acessibilidade">Acessibilidade</a>
+    <a href="#altocontraste">Alto Contraste</a>
+    <a href="#mapadosite">Mapa do Site</a>
+    <form id="busca" class="busca">
+      <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
-
-  <div class="tab" id="barraAcessibilidade">
-    <!-- Sobre a barra de acessibilidade (Ver figura 47 do eMAG):
-    Alto Contraste (ver no guia de cores)
-    Atalhos (para conteudo, menu, busca)
-    Link para os recursos de acessibilidade de audio e imagem (ver 4.5 do eMAG)-->
-    <nav>
-      <a href="#Conteudo4">Conteudo 4</a>
-      <a href="#Conteudo3">Conteudo 3</a>
-      <a href="#Conteudo2">Conteudo 2</a>
-      <a href="#Conteudo1">Conteudo 1</a>
-      <a href="#cabecalho">Topo</a>
-    </nav>
-
-  </div>
+  <h1 class="titulo">Entrada de Dados</h1>
 
   <div class="vertical-menu">
-    <!-- https://www.w3schools.com/howto/howto_css_vertical_menu.asp -->
-    <!-- Sobre o mapa do site (Ver figura 48 do eMAG)
-    Destrinchar cada item de cada conteudo para rápido acesso-->
-    <ul>
-      <a href="PaginaInicial.html" id="home">Topo do Site</a>
-      <h3>Organização de Página</h3>
-      <li><a href="OrganizacaoPagina.html">Organização de Página</a></li>
-      <h3>TESTE</h3>
-      <li><a href="CorContraste.html">Cor e Constraste</a></li>
-      <h3>TESTE</h3>
-      <li><a href="Instrucoes.html">Instruções</a></li>
-      <h3>TESTE</h3>
-      <li><a href="EntradaDados.html">Entrada de Dados</a></li>
-    </ul>
+    <a href="#" class="active">Home</a>
+    <a href="#Conteudo1">Entrada de Dados</a>
+    <a href="#Conteudo2">Fornecer Instruções para Entrada de Dados</a>
+    <a href="#Conteudo3">Identificar e Descrever Erros de Entrada de Dados</a>
+    <a href="#Conteudo4">Confirmar o Envio de Dados como Forma de Revisão</a>
+    <a href="#Conteudo5">Agrupar por Tipo de Dados no Formulário</a>
+    <a href="#Conteudo6">Fornecer uma Alternativa ao CAPTCHA</a>
   </div>
 
   <section class="conteudos" id="conteudos">
     <section id="Conteudo1" class="tabcontent">
-      <h3>Organização de Página</h3>
+      <h3><span class="name">Entrada de Dados</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Marcação Adequada de Cabeçalhos</p><p>
-          2- Âncoras para um Bloco de Conteúdo (Barra de Acessibilidade)</p><p>
-          3- Divisão das Áreas de Informação</p><p>
-          4- Evitar Novas Instâncias sem a Solicitação do Usuário</p><p>
-          5- Evitar Elementos com Intermitência</p><p>
-          6- Usar o Recurso de Migalhas
-        </p>
-    </section>
 
+      </p>
+    </section>
     <section id="Conteudo2" class="tabcontent">
-      <h3>Cor e Constraste</h3>
+      <h3><span class="name">Fornecer Instruções para Entrada de Dados</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Contraste Mínimo Entre os Planos:</p><p>
-          2- Utilizar mais Recursos além da Cor para Diferenciação:</p><p>
-          3- Usar Cor para Realçar o Elemento em Foco
+        Para conteúdo que exige entrada de dados por parte do usuário, devem ser fornecidas instruções de preenchimento juntamente com as etiquetas (elemento LABEL). Recomenda-se que a entrada de dados seja facilitada, como a exclusão de caracteres especiais em campos numéricos (Ex: número de documentos como CPF, datas, moeda), e a simplificação de campos.
+        Campos de preenchimento obrigatório devem ser claramente indicados. Uma solução para isso é inserir um asterisco em forma de imagem ao lado de cada campo obrigatório, fornecendo uma descrição no atributo alt para esta imagem, que poderia ser “campo obrigatório” ou, simplesmente, “obrigatório”. Para quem enxerga, basta visualizar o asterisco para distinguir os campos obrigatórios. Com o leitor de tela, a informação do alt é lida para o usuário.
       </p>
-    </section>
+      <div class="exemplos1">
+        <div class="div-form1">
+          <form class="form1">
+            <label for="fname"><i style="font-size:12px" class="fa">&#xf069;</i> Nome Completo</label>
+            <input type="text" alt="campo obrigatório, entre com o seu nome completo" id="fname" name="firstname" placeholder="Digite o seu Nome Completo.." required>
 
+            <label>Seu Aniversário: (dia/mes/ano)</label>
+            <input type="date" name="bday">
+
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+      </div>
+    </section>
     <section id="Conteudo3" class="tabcontent">
-      <h3>Instruções</h3>
+      <h3><span class="name">Identificar e Descrever Erros de Entrada de Dados</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Associar Etiquetas aos Campos</p><p>
-          2- Não Provocar Automaticamente Alteração no Contexto
+        Quando um erro de entrada de dados for automaticamente detectado, o item que apresenta erro deve ser identificado e descrito ao usuário por texto.
       </p>
+      <div class="div-form1">
+        <form name="form1">
+          <label>Seu CPF: (NNN.NNN.NNN-NN)</label>
+          <input type="text" name="cpf"
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+          title="Digite o CPF no formato nnn.nnn.nnn-nn" required>
+
+          <label>Seu Telefone: (NNNN-NNNN)</label>
+          <input type="text" name="telefone"
+          pattern="\d{4}-\d{4}"
+          title="Digite o número telefônico no formato nnnn-nnnn">
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </section>
+    <section id="Conteudo4" class="tabcontent">
+      <h3><span class="name">Confirmar o Envio de Dados como Forma de Revisão</span></h3>
+      <p>
+        Após a validação dos dados, antes de enviar o formulário, uma tela de confirmação deverá aparecer, permitindo que o usuário verifique e, se necessário, edite as informações antes de enviá-las.
+      </p>
+      <img src="img/confirmacao.png" alt="tela de confirmacao de Dados">
+    </section>
+    <section id="Conteudo5" class="tabcontent">
+      <h3><span class="name">Agrupar por Tipo de Dados no Formulário</span></h3>
+      <p>
+        Estabelecer blocos dividindo o formulário por tipo de dado pedido através de etiquetas (elemento LABEL).
+      </p>
+      <form class=" fieldsets w3-container w3-card-4 w3-light-grey">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          Nome Completo:<br>
+          <input class="w3-input w3-border" type="text" name="firstname" value="João da Silva">
+          <br>
+          Telefone Pessoal:<br>
+          <input class="w3-input w3-border" type="text" name="telefonepessoal" value="4002-8922">
+          <br>
+        </fieldset>
+        <fieldset>
+          <legend>Dados Profissionais</legend>
+          Empresa:<br>
+          <input class="w3-input w3-border" type="text" name="empresa" value="Stark">
+          <br>
+          E-mail:<br>
+          <input class="w3-input w3-border" type="text" name="email" value="joao@gmail.com">
+          <br>
+        </fieldset>
+        <fieldset>
+          <legend>Áreas de Conhecimento</legend>
+          Linguagens de Programação:<br>
+          <input class="w3-input w3-border" type="text" name="linguagens" value="C,JAVA,HTML,CSS">
+          <br>
+          Sistemas Operacionais:<br>
+          <input class="w3-input w3-border" type="text" name="sistemas" value="Linux">
+          <br>
+        </fieldset>
+        <input type="submit"  value="Enviar" class=" botaoEnviar w3-button w3-green" >
+      </form>
+    </section>
+    <section id="Conteudo6" class="tabcontent">
+      <h3><span class="name">Fornecer uma Alternativa ao CAPTCHA</span></h3>
+      <p>
+        O CAPTCHA deverá ser fornecido em forma de pergunta simples de interpretação (CAPTCHA Humano), e este preferencialmente só deverá ser apresentado após pelo menos 2 tentativas de envio do formulário, por exemplo. É preciso garantir que a pergunta não seja de difícil resolução, permitindo que a mesma possa ser respondida por pessoas de variadas culturas e níveis de instrução.
+      </p>
+      <form class="w3-container w3-card-4 w3-light-grey">
+        <fieldset>
+          <legend>CAPTCHA</legend>
+          Escreva por extenso quanto é dois mais três:<br>
+          <input class="w3-input w3-border" type="text" name="resposta" value="">
+          <br>
+          <input type="submit" value="Enviar" class="w3-button w3-green">
+        </fieldset>
+      </form>
     </section>
   </section>
-
-  <section id="Conteudo4" class="tabcontent">
-    <h3>Entrada de Dados</h3>
-    <p>
-      Dentro dessa section serão tratados:</p><p>
-        1- Fornecer Instruções para Entrada de Dados</p><p>
-        2- Identificar e Descrever Erros de Entrada de Dados</p><p>
-        3- Confirmar o Envio de Dados como Forma de Revisão</p><p>
-        4- Agrupar por Tipo de Dados no Formulário</p><p>
-        5- Fornecer uma Alternativa ao CAPTCHA
-    </p>
-  </section>
-</section>
-
-  <div class="footer">
-    <!-- https://www.w3schools.com/howto/howto_css_fixed_footer.asp -->
-    <p>Footer</p>
-  </div>
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/NavegacaoPorLinks.js"></script>
   <script type="text/javascript" src="js/Busca.js"></script>
+  <script type="text/javascript" src="js/valida.js"></script>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+  w3CodeColor();
+  </script>
 </body>
 </html>

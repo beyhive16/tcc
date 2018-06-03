@@ -1,0 +1,145 @@
+body {
+  margin: 0px;
+}
+
+/*CLASS*/
+.titulo{
+  height: auto;
+  font-weight: bold;
+  padding: 40px 30px;
+  background-color: #4CAF50;
+}
+.busca {
+  margin-top: 7px;
+  margin-right: 2px;
+  float: right;
+}
+.busca input[type=text] {
+  padding: 7px;
+  border: none;
+  font-size: 17px;
+}
+.busca button {
+  float: right;
+  padding: 7px;
+  position: relative;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.busca .search-container button:hover {
+  background: #0b7dda;
+}
+.busca::after{
+  content: "";
+  clear: both;
+}
+
+.topnav{
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  background-color: #4CAF50;
+  overflow: hidden;
+  font-weight: bold;
+  /*https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp*/
+  position: fixed;
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.topnav a {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  background-color: #eee;
+  color: black;
+}
+
+.topnav a.active {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  background-color: #4CAF50;
+  color: white;
+}
+
+.tabcontent {
+  /*https://www.w3schools.com/howto/howto_js_topnav.asp*/
+  float: right;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 83%;
+  border-left: none;
+  height: auto;
+}
+
+.vertical-menu {
+  border: 1px solid #ccc;
+  border-left: none;
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  width: 200px; /* Set a width if you like */
+  position: fixed;
+}
+
+.vertical-menu nav {
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  background-color: white; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+.vertical-menu a{
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+.vertical-menu a:hover {
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  /*https://www.w3schools.com/howto/howto_css_vertical_menu.asp*/
+  background-color: #4CAF50; /* Add a green color to the "active/current" link */
+  color: white;
+}
+.form1{
+  margin-bottom: 15px;
+}
+
+
+/*.footer {
+  /*https://www.w3schools.com/howto/howto_css_fixed_footer.asp*
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}*/
+
+#home{
+  color: black;
+  float: center;
+}
+
+#nome{
+  width: 30%;
+}
+
+#selecao{
+  width: 50%;
+}

@@ -4,111 +4,101 @@
   <title>Guia do Desenvolvedor Consciente</title>
   <meta charset="utf-8">
   <link rel="icon" href="img/icon.png">
-  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/estiloInstrucoes.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
 </head>
 <body>
 
-  <div id="cabecalho" class="cabecalho">
-    <h1 class="titulo" id="tituloPag">Instrucoes</h1>
-    <div class="busca">
-      <form action="" style="margin:auto;max-width:300px">
-        <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
+  <div class="topnav">
+    <a href="#acessibilidade">Acessibilidade</a>
+    <a href="#altocontraste">Alto Contraste</a>
+    <a href="#mapadosite">Mapa do Site</a>
+    <form id="busca" class="busca">
+      <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
-
-  <div class="tab" id="barraAcessibilidade">
-    <!-- Sobre a barra de acessibilidade (Ver figura 47 do eMAG):
-    Alto Contraste (ver no guia de cores)
-    Atalhos (para conteudo, menu, busca)
-    Link para os recursos de acessibilidade de audio e imagem (ver 4.5 do eMAG)-->
-    <nav>
-      <a href="#Conteudo4">Conteudo 4</a>
-      <a href="#Conteudo3">Conteudo 3</a>
-      <a href="#Conteudo2">Conteudo 2</a>
-      <a href="#Conteudo1">Conteudo 1</a>
-      <a href="#cabecalho">Topo</a>
-    </nav>
-
-  </div>
+  <h1 class="titulo">Instruções</h1>
 
   <div class="vertical-menu">
-    <!-- https://www.w3schools.com/howto/howto_css_vertical_menu.asp -->
-    <!-- Sobre o mapa do site (Ver figura 48 do eMAG)
-    Destrinchar cada item de cada conteudo para rápido acesso-->
-    <ul>
-      <a href="PaginaInicial.html" id="home">Topo do Site</a>
-      <h3>Organização de Página</h3>
-      <li><a href="OrganizacaoPagina.html">Organização de Página</a></li>
-      <h3>TESTE</h3>
-      <li><a href="CorContraste.html">Cor e Constraste</a></li>
-      <h3>TESTE</h3>
-      <li><a href="Instrucoes.html">Instruções</a></li>
-      <h3>TESTE</h3>
-      <li><a href="EntradaDados.html">Entrada de Dados</a></li>
-    </ul>
+    <a href="#" class="active">Home</a>
+    <a href="#Conteudo1">Instruções</a>
+    <a href="#Conteudo2">Associar Etiquetas aos Campos</a>
+    <a href="#Conteudo3">Não Provocar Automaticamente Alteração no Contexto</a>
   </div>
 
   <section class="conteudos" id="conteudos">
     <section id="Conteudo1" class="tabcontent">
-      <h3>Organização de Página</h3>
+      <h3><span class="name">Instruções</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Marcação Adequada de Cabeçalhos</p><p>
-          2- Âncoras para um Bloco de Conteúdo (Barra de Acessibilidade)</p><p>
-          3- Divisão das Áreas de Informação</p><p>
-          4- Evitar Novas Instâncias sem a Solicitação do Usuário</p><p>
-          5- Evitar Elementos com Intermitência</p><p>
-          6- Usar o Recurso de Migalhas
-        </p>
-    </section>
 
+      </p>
+    </section>
     <section id="Conteudo2" class="tabcontent">
-      <h3>Cor e Constraste</h3>
+      <h3><span class="name">Associar Etiquetas aos Campos</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Contraste Mínimo Entre os Planos:</p><p>
-          2- Utilizar mais Recursos além da Cor para Diferenciação:</p><p>
-          3- Usar Cor para Realçar o Elemento em Foco
+        As etiquetas de texto (elemento LABEL) devem estar associadas aos seus campos (elementos INPUT, SELECT e TEXTAREA, com exceção do elemento BUTTON).
       </p>
-    </section>
+      <div class="form1 w3w3-container">
+        <label for="nome">Nome: </label>
+        <input class="w3-input w3-border w3-round-large" type="text" name="nome" id="nome" />
+        <label for="sexo">Sexo: </label>
+        <input class="w3-radio" type="radio" id="fem" name="sexo" />
+        <label for="fem">Feminino</label>
+        <input class="w3-radio" type="radio" id="mas" name="sexo" />
+        <label for="mas">Masculino</label>
+        <button onclick="myFunction('DemoHTML')" class="w3-button w3-block w3-green" style="width:30%">Ver Código</button>
+        <div id="DemoHTML" class="w3-hide w3-panel w3-card w3-light-grey">
+          <h4>HTML do Formulário</h4>
+          <div class="w3-code htmlHigh notranslate">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+            &lt;body&gt;<br><br>
+            &lt;label for="nome"&gt;Nome: &lt;/label&gt;<br>
+            &lt;input class="w3-input w3-border w3-round-large" type="text" name="nome" id="nome" /&gt;<br>
+            &lt;label for="sexo"&gt;Sexo: &lt;/label&gt;<br>
+            &lt;input class="w3-radio" type="radio" id="fem" name="sexo" /&gt;<br>
+            &lt;label for="fem"&gt;Feminino&lt;/label&gt;<br>
+            &lt;input class="w3-radio" type="radio" id="mas" name="sexo" /&gt;<br>
+            &lt;label for="mas"&gt;Masculino&lt;/label&gt;<br><br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+          </div>
+        </div>
+      </div>
 
+    </section>
     <section id="Conteudo3" class="tabcontent">
-      <h3>Instruções</h3>
+      <h3><span class="name">Não Provocar Automaticamente Alteração no Contexto</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Associar Etiquetas aos Campos</p><p>
-          2- Não Provocar Automaticamente Alteração no Contexto
+        Quando um elemento de formulário receber o foco, não deve ser iniciada uma mudança automática na página que confunda ou desoriente o usuário. Assim, as mudanças devem ocorrer através do acionamento de um botão.
       </p>
+      <form class="w3-container w3-card-4" id="formSelecao">
+        <h4>Selecione a cidade:</h4>
+        <select class="w3-select" id="selecao" name="option">
+          <option value="" disabled selected>Escolha</option>
+          <option value="THE">Teresina</option>
+          <option value="PHB">Parnaíba</option>
+          <option value="CHB">Curitiba</option>
+        </select>
+        <p><button class="w3-btn w3-teal">Selecionar</button></p>
+      </form>
     </section>
-  </section>
 
-  <section id="Conteudo4" class="tabcontent">
-    <h3>Entrada de Dados</h3>
-    <p>
-      Dentro dessa section serão tratados:</p><p>
-        1- Fornecer Instruções para Entrada de Dados</p><p>
-        2- Identificar e Descrever Erros de Entrada de Dados</p><p>
-        3- Confirmar o Envio de Dados como Forma de Revisão</p><p>
-        4- Agrupar por Tipo de Dados no Formulário</p><p>
-        5- Fornecer uma Alternativa ao CAPTCHA
-    </p>
   </section>
-</section>
-
-  <div class="footer">
-    <!-- https://www.w3schools.com/howto/howto_css_fixed_footer.asp -->
-    <p>Footer</p>
-  </div>
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/NavegacaoPorLinks.js"></script>
   <script type="text/javascript" src="js/Busca.js"></script>
+  <script type="text/javascript" src="js/collapse.js"></script>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+  w3CodeColor();
+  </script>
 </body>
 </html>

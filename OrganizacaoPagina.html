@@ -4,111 +4,388 @@
   <title>Guia do Desenvolvedor Consciente</title>
   <meta charset="utf-8">
   <link rel="icon" href="img/icon.png">
-  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/estiloOrganizacaoPagina.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
 </head>
 <body>
 
-  <div id="cabecalho" class="cabecalho">
-    <h1 class="titulo" id="tituloPag">Organização da Página</h1>
-    <div class="busca">
-      <form action="" style="margin:auto;max-width:300px">
-        <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
+  <div class="topnav">
+    <a href="#acessibilidade">Acessibilidade</a>
+    <a href="#altocontraste">Alto Contraste</a>
+    <a href="#mapadosite">Mapa do Site</a>
+    <form id="busca" class="busca">
+      <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
-
-  <div class="tab" id="barraAcessibilidade">
-    <!-- Sobre a barra de acessibilidade (Ver figura 47 do eMAG):
-    Alto Contraste (ver no guia de cores)
-    Atalhos (para conteudo, menu, busca)
-    Link para os recursos de acessibilidade de audio e imagem (ver 4.5 do eMAG)-->
-    <nav>
-      <a href="#Conteudo4">Conteudo 4</a>
-      <a href="#Conteudo3">Conteudo 3</a>
-      <a href="#Conteudo2">Conteudo 2</a>
-      <a href="#Conteudo1">Conteudo 1</a>
-      <a href="#cabecalho">Topo</a>
-    </nav>
-
-  </div>
+  <h1 class="titulo">Organização de Página</h1>
 
   <div class="vertical-menu">
-    <!-- https://www.w3schools.com/howto/howto_css_vertical_menu.asp -->
-    <!-- Sobre o mapa do site (Ver figura 48 do eMAG)
-    Destrinchar cada item de cada conteudo para rápido acesso-->
-    <ul>
-      <a href="PaginaInicial.html" id="home">Topo do Site</a>
-      <h3>Organização de Página</h3>
-      <li><a href="OrganizacaoPagina.html">Organização de Página</a></li>
-      <h3>TESTE</h3>
-      <li><a href="CorContraste.html">Cor e Constraste</a></li>
-      <h3>TESTE</h3>
-      <li><a href="Instrucoes.html">Instruções</a></li>
-      <h3>TESTE</h3>
-      <li><a href="EntradaDados.html">Entrada de Dados</a></li>
-    </ul>
+    <a href="#" class="active">Home</a>
+    <a href="#Conteudo1">Organização de Página</a>
+    <a href="#Conteudo2">Marcação Adequada de Cabeçalhos</a>
+    <a href="#Conteudo3">Âncoras para um Bloco de Conteúdo</a>
+    <a href="#Conteudo4">Divisão das Áreas de Informação</a>
+    <a href="#Conteudo5">Evitar Novas Instâncias sem a Solicitação do Usuário</a>
+    <a href="#Conteudo6">Usar o Recurso de Migalhas</a>
+    <a href="#Conteudo7">Evitar Elementos com Intermitência</a>
   </div>
 
   <section class="conteudos" id="conteudos">
     <section id="Conteudo1" class="tabcontent">
-      <h3>Organização de Página</h3>
+      <h3><span class="name">Organização de Página</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Marcação Adequada de Cabeçalhos</p><p>
-          2- Âncoras para um Bloco de Conteúdo (Barra de Acessibilidade)</p><p>
-          3- Divisão das Áreas de Informação</p><p>
-          4- Evitar Novas Instâncias sem a Solicitação do Usuário</p><p>
-          5- Evitar Elementos com Intermitência</p><p>
-          6- Usar o Recurso de Migalhas
-        </p>
-    </section>
 
+      </p>
+    </section>
     <section id="Conteudo2" class="tabcontent">
-      <h3>Cor e Constraste</h3>
+      <h3><span class="name">Marcação Adequada de Cabeçalhos</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Contraste Mínimo Entre os Planos:</p><p>
-          2- Utilizar mais Recursos além da Cor para Diferenciação:</p><p>
-          3- Usar Cor para Realçar o Elemento em Foco
-      </p>
-    </section>
+        Os níveis de cabeçalho devem ser utilizados de forma hierárquica por ordem de importância e subordinação dos conteúdos, sem pular um ou mais níveis, afinal, muitos leitores de tela utilizam a hierarquia de cabeçalhos como uma forma de navegação na página.
 
+        Considerando os níveis de títulos o H1 é o mais alto e deverá corresponder ao conteúdo principal da página, assim é recomendável que toda página tenha apenas um H1. Já os níveis H2 ao H6 poderão ser utilizados mais de uma vez na página, obedecendo uma hierarquia.
+      </p>
+      <div class="w3-container">
+        <form class=" fieldsets w3-padding-large w3-card-4 w3-light-grey">
+          <fieldset>
+            <h1>Eu sou um título h1</h1>
+            <h2>Eu sou um título h2</h2>
+            <h3>Eu sou um título h3</h3>
+            <h4>Eu sou um título h4</h4>
+            <h5>Eu sou um título h5</h5>
+            <h6>Eu sou um título h6</h6>
+          </fieldset>
+        </form>
+      </div>
+    </section>
     <section id="Conteudo3" class="tabcontent">
-      <h3>Instruções</h3>
+      <h3><span class="name">Âncoras para um Bloco de Conteúdo</span></h3>
       <p>
-        Dentro dessa section serão tratados:</p><p>
-          1- Associar Etiquetas aos Campos</p><p>
-          2- Não Provocar Automaticamente Alteração no Contexto
+        Devem ser fornecidas âncoras, disponíveis na barra de acessibilidade, que apontem para links relevantes presentes na mesma página. Assim, é possível ir ao bloco de conteúdo desejado.
+
+        Links adjacentes devem ser devidamente separados  para que não fiquem confusos, em especial para usuários que utilizam leitor de tela. Para isso, é recomendado o uso de listas, onde cada elemento dentro da lista é um link. As listas podem ser estilizadas visualmente com CSS para que os itens sejam mostrados da maneira desejada, como um ao lado do outro.
+      </p>
+      <!--<img src="img/barra.png" alt="barra de acesso rápido">-->
+      <div class="w3-bar w3-light-grey">
+        <a href="#" class="w3-bar-item w3-button">Inicio</a>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-green" onclick="myFunction('Demo2')">Ver Código</a>
+      </div>
+      <div id="Demo2" class="w3-hide w3-panel w3-card w3-light-grey">
+        <h4>Código da Barra de Navegação</h4>
+        <div class="w3-code htmlHigh notranslate">
+          &lt;div class="w3-bar w3-light-grey"&gt;<br>
+          &lt;a href="#" class="w3-bar-item w3-button">Inicio&lt;/a&gt;<br>
+          &lt;a href="#" class="w3-bar-item w3-button">Link 1&lt;/a&gt;<br>
+          &lt;a href="#" class="w3-bar-item w3-button">Link 2&lt;/a&gt;<br>
+          &lt;a href="#" class="w3-bar-item w3-button">Link 3&lt;/a&gt;<br>
+          &lt;a href="#" class="w3-bar-item w3-button w3-green" onclick="myFunction('Demo2')"&gt;Ver Código&lt;/a&gt;<br>
+          &lt;/div&gt;<br>
+        </div>
+      </div>
+    </section>
+    <section id="Conteudo4" class="tabcontent">
+      <h3><span class="name">Divisão das Áreas de Informação</span></h3>
+      <p>
+        Áreas de informação devem ser divididas em grupos fáceis de gerenciar. As divisões mais comuns são “topo”, “conteúdo”, “menu” e “rodapé”. Nas páginas internas deve-se manter uma mesma divisão para que o usuário se familiarize mais rapidamente com a estrutura do sítio.
+
+        A divisão em blocos de conteúdo representa a base para a utilização dos atalhos, permitindo que o usuário tenha rápido acesso à área desejada. Elementos de navegação deverão ser mantidos na mesma posição em todas as páginas, podendo ser diferente na página inicial já que, muitas vezes, apresenta uma estrutura diferenciada.
+      </p>
+      <div class="exemploOrganizacao">
+        <img src="img/organizacao.png" alt="exemplo de organizacao de pagina">
+      </div>
+      <button type="button" class="botaoMostraCodigo" onclick="myFunction('Demo1')">Ver Código</button>
+      <div id="Demo1" class="w3-hide w3-panel w3-card w3-light-grey">
+        <h4>Código da Página Exemplo</h4>
+        <div class="w3-code htmlHigh notranslate">
+          &lt;!DOCTYPE html&gt;<br>
+          &lt;html&gt;<br>
+          &lt;title&gt;EXEMPLO&lt;/title&gt;<br>
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+          &lt;link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"&gt;<br>
+          &lt;link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css"&gt;<br>
+          &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"&gt;<br>
+          &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">&lt;style&gt;<br>
+          body {font-family: "Roboto", sans-serif}<br>
+          .w3-bar-block .w3-bar-item{padding:16px;font-weight:bold}<br>
+          &lt;/style&gt;<br>
+          &lt;body&gt;<br>
+          &lt;div&gt;<br>
+          &lt;nav class="w3-sidebar w3-bar-block w3-card" style="z-index:3;width:250px;" id="mySidebar"&gt;<br>
+          &lt;a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#">&lt;img src="https://www.w3schools.com/images/w3schools.png" style="width:80%;"&gt;&lt;/a&gt;<br>
+          &lt;a class="w3-bar-item w3-button w3-teal" href="#">Home&lt;/a&gt;<br>
+          &lt;a class="w3-bar-item w3-button" href="#">Link 1&lt;/a&gt;<br>
+          &lt;a class="w3-bar-item w3-button" href="#">Link 2&lt;/a&gt;<br>
+          &lt;a class="w3-bar-item w3-button" href="#">Link 3&lt;/a&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;/nav&gt;<br>
+          &lt;div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">&lt;/div&gt;<br>
+          &lt;div class="w3-main" style="margin-left:250px;"&gt;<br>
+          &lt;div id="myTop" class="w3-container w3-top w3-theme w3-large"&gt;<br>
+          &lt;p&gt;&lt;i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()">&lt;/i&gt;<br>
+          &lt;span id="myIntro" class="w3-hide">W3.CSS: Introduction&lt;/span>&lt;/p&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;header class="w3-container w3-theme" style="padding:64px 32px"&gt;<br>
+          &lt;h1 class="w3-xxxlarge">W3.CSS&lt;/h1&gt;<br>
+          &lt;/header&gt;<br>
+          &lt;div class="w3-container" style="padding:32px"&gt;<br>
+          &lt;h2&gt;What is W3.CSS?&lt;/h2&gt;<br>
+          &lt;p&gt;W3.CSS is a modern CSS framework with built-in responsiveness:&lt;/p&gt;<br>
+          &lt;ul class="w3-leftbar w3-theme-border" style="list-style:none"&gt;<br>
+          &lt;li&gt;Smaller and faster than other CSS frameworks.&lt;/li&gt;<br>
+          &lt;li&gt;Easier to learn, and easier to use than other CSS frameworks.&lt;/li&gt;<br>
+          &lt;li&gt;Uses standard CSS only (No jQuery or JavaScript library).&lt;/li&gt;<br>
+          &lt;li&gt;Speeds up mobile HTML apps.&lt;/li&gt;<br>
+          &lt;li&gt;Provides CSS equality for all devices. PC, laptop, tablet, and mobile:&lt;/li&gt;<br>
+          &lt;/ul&gt;<br>
+          &lt;hr&gt;<br>
+          &lt;h2&gt;W3.CSS is Free&lt;/h2&gt;<br>
+          &lt;p&gt;W3.CSS is free to use. No license is necessary&lt;/p&gt;<br>
+          &lt;hr&gt;<br>
+          &lt;h2&gt;Easy to Use&lt;/h2&gt;<br>
+          &lt;div class="w3-container w3-sand w3-leftbar"&gt;<br>
+          &lt;p&gt;&lt;i&gt;Make it as simple as possible, but not simpler.&lt;/i&gt;<br>
+          Albert Einstein&lt;/p&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;hr&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;footer class="w3-container w3-theme" style="padding:32px"&gt;<br>
+          &lt;p&gt;Footer information goes here&lt;/p&gt;<br>
+          &lt;/footer&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;script&gt;<br>
+          window.onscroll = function() {myFunction()};<br>
+          function myFunction() {<br>
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {<br>
+              document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");<br>
+              document.getElementById("myIntro").classList.add("w3-show-inline-block");<br>
+            } else {<br>
+              document.getElementById("myIntro").classList.remove("w3-show-inline-block");<br>
+              document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");<br>
+            }<br>
+          }<br>
+          &lt;/script&gt;<br>
+          &lt;/body&gt;<br>
+          &lt;/html&gt;<br>
+        </div>
+      </div>
+    </section>
+    <section id="Conteudo5" class="tabcontent">
+      <h3><span class="name">Evitar Novas Instâncias sem a Solicitação do Usuário</span></h3>
+      <p>
+        A decisão de utilizar-se de novas instâncias – por exemplo abas ou janelas - para acesso a páginas e serviços ou qualquer informação deve ser de escolha do usuário. Assim, não devem ser utilizados: Pop-ups; A abertura de novas abas ou janelas; O uso do atributo target=“_blank”; Mudanças no controle do foco do teclado.
+
+        Os links devem abrir na guia ou janela atual de navegação, pois os usuários com deficiência visual podem ter dificuldade em identificar que uma nova janela foi aberta.
       </p>
     </section>
-  </section>
+    <section id="Conteudo6" class="tabcontent">
+      <h3><span class="name">Usar o Recurso de Migalhas</span></h3>
+      <p>
+        Deverá ser fornecido um mecanismo que permita ao usuário orientar-se dentro de um conjunto de páginas, permitindo que ele saiba onde está no momento. Assim, poderá ser utilizado o recurso de “migalha de pão”, que são links navegáveis em forma de lista hierárquica os quais permitem que o usuário saiba qual o caminho percorrido até chegar à página em que se encontra no momento.
 
-  <section id="Conteudo4" class="tabcontent">
-    <h3>Entrada de Dados</h3>
-    <p>
-      Dentro dessa section serão tratados:</p><p>
-        1- Fornecer Instruções para Entrada de Dados</p><p>
-        2- Identificar e Descrever Erros de Entrada de Dados</p><p>
-        3- Confirmar o Envio de Dados como Forma de Revisão</p><p>
-        4- Agrupar por Tipo de Dados no Formulário</p><p>
-        5- Fornecer uma Alternativa ao CAPTCHA
-    </p>
-  </section>
-</section>
+        OBS: Na migalha de pão, todas as páginas do caminho, com exceção da qual está o usuário (posição atual), deverão estar implementadas como links e contidas dentro de uma lista.
+      </p>
+      <div>
+        <ul class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Fotos</a></li>
+          <li><a href="#">Viagens</a></li>
+          <li>Luis Correia</li>
+        </ul>
+      </div>
+    </section>
+    <section id="Conteudo7" class="tabcontent">
+      <h3><span class="name">Evitar Elementos com Intermitência</span></h3>
+      <p>
+        Não devem ser utilizados efeitos visuais piscantes, intermitentes ou cintilantes. Em pessoas com epilepsia fotosensitiva, o cintilar ou piscar pode desencadear um ataque epilético. A exigência dessa diretriz aplica-se também para propaganda de terceiros inserida na página.
 
-  <div class="footer">
-    <!-- https://www.w3schools.com/howto/howto_css_fixed_footer.asp -->
-    <p>Footer</p>
-  </div>
+        Conteúdos como slideshows, que “se movem”, rolagens, movimentações em geral ou animações não devem ser disparadas automaticamente sem o controle do usuário, mesmo em propagandas na página. Ao usuário deve ser repassado o controle sobre essas movimentações, além disso, o usuário deve ser capaz de parar e reiniciar conteúdos que se movem, sem exceção. É desejável que o usuário tenha também o controle da velocidade desses conteúdos.
+      </p>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/img_nature_wide.jpg" style="width:100%">
+        <div class="text">Paisagem 1</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/img_fjords_wide.jpg" style="width:100%">
+        <div class="text">Paisagem 2</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/img_mountains_wide.jpg" style="width:100%">
+        <div class="text">Paisagem 3</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <button class="botaoMostraCodigo" onclick="myFunction('Demo3')">Ver Código</button>
+    <div id="Demo3" class="w3-hide w3-panel w3-card w3-light-grey">
+      <h4>Código do Slide Show</h4>
+
+      <div class="w3-code htmlHigh notranslate">
+        &lt;div class="slideshow-container"&gt;<br>
+          &lt;div class="mySlides fade"&gt;<br>
+            &lt;div class="numbertext"&gt;1 / 3&lt;/div&gt;<br>
+            &lt;img src="img/img_nature_wide.jpg" style="width:100%"&gt;<br>
+            &lt;div class="text">Paisagem 1&lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+
+          &lt;div class="mySlides fade"&gt;<br>
+            &lt;div class="numbertext"&gt;2 / 3&lt;/div&gt;<br>
+            &lt;img src="img/img_fjords_wide.jpg" style="width:100%"&gt;<br>
+            &lt;div class="text">Paisagem 2&lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+
+          &lt;div class="mySlides fade"&gt;<br>
+            &lt;div class="numbertext"&gt;3 / 3&lt;/div&gt;<br>
+            &lt;img src="img/img_mountains_wide.jpg" style="width:100%"&gt;<br>
+            &lt;div class="text">Paisagem 3&lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+
+          &lt;a class="prev" onclick="plusSlides(-1)"&gt;&#10094;&lt;/a&gt;<br>
+          &lt;a class="next" onclick="plusSlides(1)"&gt;&#10095;&lt;/a&gt;<br>
+        &lt;/div&gt;<br>
+        <br>
+
+        &lt;div style="text-align:center"&gt;<br>
+          &lt;span class="dot" onclick="currentSlide(1)"&gt;&lt;/span&gt;<br>
+          &lt;span class="dot" onclick="currentSlide(2)"&gt;&lt;/span&gt;<br>
+          &lt;span class="dot" onclick="currentSlide(3)"&gt;&lt;/span&gt;<br>
+        &lt;/div&gt;<br>
+      </div>
+      <div class="w3-code cssHigh notranslate">
+        /* Slideshow container */<br>
+        .slideshow-container {<br>
+          max-width: 500px;<br>
+          position: relative;<br>
+          margin: auto;
+        }
+<br>
+        /* Next & previous buttons */<br>
+        .prev, .next {<br>
+          cursor: pointer;<br>
+          position: absolute;<br>
+          top: 50%;<br>
+          width: auto;<br>
+          padding: 16px;<br>
+          margin-top: -22px;<br>
+          color: white;<br>
+          font-weight: bold;<br>
+          font-size: 18px;<br>
+          transition: 0.6s ease;<br>
+          border-radius: 0 3px 3px 0;
+        }
+<br>
+        /* Position the "next button" to the right */<br>
+        .next {<br>
+          right: 0;<br>
+          border-radius: 3px 0 0 3px;
+        }
+<br>
+        /* On hover, add a black background color with a little bit see-through */<br>
+        .prev:hover, .next:hover {<br>
+          background-color: rgba(0,0,0,0.8);
+        }
+<br>
+        /* Caption text */<br>
+        .text {<br>
+          color: #f2f2f2;<br>
+          font-size: 15px;<br>
+          padding: 8px 12px;<br>
+          position: absolute;<br>
+          bottom: 8px;<br>
+          width: 100%;<br>
+          text-align: center;
+        }
+<br>
+        /* Number text (1/3 etc) */<br>
+        .numbertext {<br>
+          color: #f2f2f2;<br>
+          font-size: 12px;<br>
+          padding: 8px 12px;<br>
+          position: absolute;<br>
+          top: 0;
+        }
+<br>
+        /* The dots/bullets/indicators */<br>
+        .dot {<br>
+          cursor: pointer;<br>
+          height: 15px;<br>
+          width: 15px;<br>
+          margin: 0 2px;<br>
+          background-color: #bbb;<br>
+          border-radius: 50%;<br>
+          display: inline-block;<br>
+          transition: background-color 0.6s ease;
+        }
+<br>
+        .active, .dot:hover {<br>
+          background-color: #717171;
+        }<br>
+      </div>
+      <div class="w3-code jsHigh notranslate">
+        var slideIndex = 1;<br>
+        showSlides(slideIndex);<br>
+
+        function plusSlides(n) {<br>
+          showSlides(slideIndex += n);
+        }<br>
+
+        function currentSlide(n) {<br>
+          showSlides(slideIndex = n);
+        }<br>
+
+        function showSlides(n) {<br>
+          var i;<br>
+          var slides = document.getElementsByClassName("mySlides");<br>
+          var dots = document.getElementsByClassName("dot");<br>
+          if (n > slides.length) {slideIndex = 1}<br>
+          if (n < 1) {slideIndex = slides.length}<br>
+          for (i = 0; i < slides.length; i++) {<br>
+              slides[i].style.display = "none";
+          }<br>
+          for (i = 0; i < dots.length; i++) {<br>
+              dots[i].className = dots[i].className.replace(" active", "");
+          }<br>
+          slides[slideIndex-1].style.display = "block";<br>
+          dots[slideIndex-1].className += " active";
+        }<br>
+
+      </div>
+    </div>
+    </section>
+  </section>
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/NavegacaoPorLinks.js"></script>
   <script type="text/javascript" src="js/Busca.js"></script>
+  <script type="text/javascript" src="js/collapse.js"></script>
+  <script type="text/javascript" src="js/slideshow1.js"></script>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+  w3CodeColor();
+  </script>
 </body>
 </html>

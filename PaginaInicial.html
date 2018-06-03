@@ -8,52 +8,33 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
 </head>
 <body>
 
-  <div id="cabecalho" class="cabecalho">
-    <h1 class="titulo" id="tituloPag">TÍTULO DA PÁGINA</h1>
-    <div class="busca">
-      <form action="" style="margin:auto;max-width:300px">
-        <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
+  <div class="topnav">
+    <a href="#acessibilidade">Acessibilidade</a>
+    <a href="#altocontraste">Alto Contraste</a>
+    <a href="#mapadosite">Mapa do Site</a>
+    <form id="busca" class="busca">
+      <input id="campoBusca" type="text" placeholder="O que está procurando?" name="busca">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
+  <h1 class="titulo">Guia do Desenvolvedor Consciente</h1>
 
-  <div class="tab" id="barraAcessibilidade">
-    <!-- Sobre a barra de acessibilidade (Ver figura 47 do eMAG):
-    Alto Contraste (ver no guia de cores)
-    Atalhos (para conteudo, menu, busca)
-    Link para os recursos de acessibilidade de audio e imagem (ver 4.5 do eMAG)-->
-    <nav>
-      <a href="#cabecalho">Topo</a>
-      <a href="#Conteudo1">Conteudo 1</a>
-      <a href="#Conteudo2">Conteudo 2</a>
-      <a href="#Conteudo3">Conteudo 3</a>
-      <a href="#Conteudo4">Conteudo 4</a>
-    </nav>
-
-  </div>
-
-  <div class="vertical-menu">
-    <!-- https://www.w3schools.com/howto/howto_css_vertical_menu.asp -->
-    <!-- Sobre o mapa do site (Ver figura 48 do eMAG)
-    Destrinchar cada item de cada conteudo para rápido acesso-->
-    <ul>
-      <a href="PaginaInicial.html" id="home">Topo do Site</a>
-      <h3>Organização de Página</h3>
+<nav>
+    <ul class="nav">
+      <li><a href="PaginaInicial.html" id="home">Topo do Site</a></li>
       <li><a href="OrganizacaoPagina.html">Organização de Página</a></li>
-      <h3>Cor e Constraste</h3>
       <li><a href="CorContraste.html">Cor e Constraste</a></li>
-      <h3>Instruções</h3>
       <li><a href="Instrucoes.html">Instruções</a></li>
-      <h3>Entrada de Dados</h3>
       <li><a href="EntradaDados.html">Entrada de Dados</a></li>
     </ul>
-  </div>
+  </nav>
+
 
   <section class="conteudos" id="conteudos">
     <section id="Conteudo1" class="tabcontent">
@@ -87,7 +68,6 @@
           2- Não Provocar Automaticamente Alteração no Contexto
       </p>
     </section>
-  </section>
 
   <section id="Conteudo4" class="tabcontent">
     <h3>Entrada de Dados</h3>
@@ -101,11 +81,6 @@
     </p>
   </section>
 </section>
-
-  <div class="footer">
-    <!-- https://www.w3schools.com/howto/howto_css_fixed_footer.asp -->
-    <p>Footer</p>
-  </div>
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/NavegacaoPorLinks.js"></script>
